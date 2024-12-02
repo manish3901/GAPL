@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel = "stylesheet" href="Google Sheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+        }
+
+        /* Centered Container for the Form */
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+table,td{border:3px solid red;
+		border-collapse:collapse;
+		font-size:30px;
+    	text-align:center;
+    	padding:5px;}
+td {width:70%;
+	color="#ff0000";
+	size="4"}
+        }
+
+        /* Form Fields Styling */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 97%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form input:focus,
+        form textarea:focus,
+        form select:focus {
+            border-color: #fda085;
+            box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+            outline: none;
+        }
+
+        /* Satisfaction Emoji Dropdown Styling */
+        form select {
+            appearance: none;
+            background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%23fda085%22 d%3D%22M2 0l2 2H0z%22/%3E%3C/svg%3E') no-repeat right 12px center;
+            background-color: #fff;
+            background-size: 12px;
+        }
+
+        /* Submit Button */
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+        }
+
+        /* Suggestions Field */
+        textarea {
+            resize: vertical;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            form input,
+            form textarea,
+            form select {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+	<table style="width:100%">
+		<tr>
+			<td> <b> GLOBAL ALUMINIUM PVT LTD </b></td>
+			<th rowspan="2">
+			<img src="https://drive.google.com/thumbnail?id=1-vmUuTSyWvfRiCBlXM0Ga9eghoduX8ni" alt="GAPL LOGO" style="width:180px;height:125px;">
+
+			</th>
+		</tr>
+
+		<tr>
+			<td style="height=20px"> Customer Feedback Form </td>
+		</tr>
+
+</table>
+
+        <form action="" method="POST" name="contact-form">
+	<br>
+            <label for="Name">Visitor's Name:</label>
+            <input type="text" id="Name" name="Name" placeholder="Enter your full name" required>
+
+            <label for="Contact">Contact Details:</label>
+            <input type="tel" id="Contact" name="Mobile/Mail-ID" placeholder="Enter your mobile number or email" required>
+
+            <label for="Company">Company Name:</label>
+            <input type="text" id="Company" name="Company" placeholder="Enter your company name" required>	
+
+            <label for="Address">Company Address:</label>
+            <textarea id="Address" name="Address" rows="3" placeholder="Enter your company address" required></textarea>
+
+            <label for="Purpose">Purpose of Visit:</label>
+            <textarea id="Purpose" name="Purpose" rows="2" placeholder="Briefly describe the purpose of your visit" required></textarea>
+
+            <label for="date">Date of Visit:</label>
+            <input type="Date" id="Date" name="Date" required>
+
+	<label for="Arrival">How were you treated upon your arrival at our plant ?</label>
+            <select id="Arrival" name="Arrival" required>
+                <option value="">Select</option>
+                <option value="Excellent">😃 Excellent</option>
+                <option value="Good">😊 Good</option>
+                <option value="Needs Improvement!">😐 Needs Improvement</option>
+                <option value="Poor">😞 Poor</option>
+            </select>
+
+	<label for="Plant Tour">How did you like our plant presentation and tour?</label>
+            <select id="Plant Tour" name="Plant Tour" required>
+                <option value="">Select</option>
+                <option value="Excellent">😃 Excellent</option>
+                <option value="Good">😊 Good</option>
+                <option value="Needs Improvement!">😐 Needs Improvement</option>
+                <option value="Poor">😞 Poor</option>
+            </select>
+
+	<label for="Resolve Queries">How was our representative in resolving your queries/questions ?</label>
+            <select id="Resolve Queries" name="Resolve Queries" required>
+                <option value="">Select</option>
+                <option value="Excellent">😃 Excellent</option>
+                <option value="Good">😊 Good</option>
+                <option value="Needs Improvement!">😐 Needs Improvement</option>
+                <option value="Poor">😞 Poor</option>
+            </select>
+
+
+            <label for="satisfaction">Overall Satisfaction Level:</label>
+            <select id="Overall Satisfaction" name="Overall Satisfaction" required>
+                <option value="">Select</option>
+                <option value="Excellent">😃 Excellent</option>
+                <option value="Good">😊 Good</option>
+                <option value="Needs Improvement">😐 Needs Improvement</option>
+                <option value="Poor">😞 Poor</option>
+            </select>
+
+            <label for="Suggestions">Suggestions:</label>
+            <textarea id="Suggestions" name="Suggestions" rows="4" placeholder="Share your suggestions or feedback"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+	<hr width="100%" color="#ff0000" size="4">
+<center><p>Thank you for visiting Global Aluminium, visit again! 
+<a href="https://globalaluminium.com/" target="_blank" title="Go to GAPL Website">Visit our Website</a></p></center>
+
+    <script>
+        // Automatically set the current date in the "date" input
+        const dateInput = document.getElementById('Date');
+        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+        dateInput.value = today; // Set the date input's value to today's date
+    </script>
+<script src="Google Sheet.js"></script>
+</body>
+</html>
